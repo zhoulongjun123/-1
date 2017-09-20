@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>首页</title><link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"><link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="/dist/css/index.css"></head><body><div class="in-hearder clearfix"><div class="hd-left pull-left"><a href="javascript:;"><img src="/public/images/header_logo.png" alt=""></a></div><div class="hd-right pull-right"><a href="javascript:;"><img src="/public/images/header_app.png" alt=""></a></div></div><div class="hd-seach"><div class="sc-right"><input type="search" placeholder="请输入你要比价的商品" name="" value=""></div><div class="sc-left"><input type="button" value="搜索"></div></div><div class="menu" id="menu_bar"></div><a href="javascript:;"><div class="recommend clearfix"><span class="pull-left">超值折扣推荐</span> <img class="pull-right" src="/public/images/more.png" alt=""></div></a><ul class="media-list clearfix" id="count"></ul><div class="more_bar"><a href="/dist/html/public/moneyctrl.html?indexmenuId=1">更多优惠信息 »</a></div><a href="javascript:;"><div class="ranking recommend clearfix"><span class="pull-left">品牌排行</span> <img class="pull-right" src="/public/images/more.png" alt=""></div></a><footer><div class="login_handle"><a href="javascript:;" class="login"><span>登录</span> </a><a href="javascript:;" class="register"><span>注册</span> </a><a href="javascript:;" class="back_to_top"><span>返回顶部</span></a></div><div class="footer_nav"><p><a href="javascript:;">手机APP下载</a> <a href="javascript:;">慢慢买手机版</a>--掌上比价平台</p><a>m.manmanbuy.com</a></div></footer><script id="menu-tpl" type="text/template">{{each $data icon i}}
+        <div class="memu-row">
+            <a href="/dist/html/public/{{icon.titlehref}}?indexmenuId={{icon.indexmenuId}}">
+                <div class="memu-top">
+                    {{@icon.img}}
+                </div>
+                <div class="name">{{icon.name}}</div>
+            </a>
+        </div>
+        {{/each}}</script><script id="list-tpl" type="text/template">{{each $data list i}}
+        <a href="/dist/html/public/save_commodity.html?productid={{list.productId}}">
+            <li class="media">
+
+                <div class="media-left">
+                    {{@list.productImgSm}}
+                </div>
+                <div class="media-body">
+                    <div class="media-heading">{{list.productName}} <span>{{list.productPinkage}}</span></div>
+                    <div class="other">
+                        <span class="small pull-left">{{list.productFrom}} | {{list.productTime}}</span>
+                        <span class="pull-right">{{list.productComCount}}</span>
+                    </div>
+                </div>
+
+            </li>
+        </a>
+        {{/each}}</script></body><script src="/dist/js/lib.js"></script><script src="/dist/js/index.js"></script></html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>凑单品功能页面</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/dist/css/skiphop/skiphop-interface.css">
+</head>
+
+<body>
+    <div class="haitao-interface-header">
+        <a href="/dist/index.html" class="interface-header-a1"><i class="fa fa-angle-left"></i></a>
+        <h1>凑单品</h1>
+        <a href="javascript:void(0);" class="interface-header-a2"><img src="/public/images/header_app.png" alt="" /></a>
+    </div>
+
+    <div class="skiphop-coudan-box">
+        <div class="skiphop-box-list">
+            <div class="skiphop-list-hd">
+                <div class="skiphop-hd-nav">
+                    <ul>
+                        <li class="hd-nav-list1" data-toggle="true">
+                            <a href="#">
+                            京东
+                            <i class="fa fa-caret-down" id="list1-font"></i>
+                        </a>
+                        </li>
+                        <li class="hd-nav-list2" data-toggle="true">
+                            <a href="#">
+                            华北
+                            <i class="fa fa-caret-down" id="list2-font"></i>
+                        </a>
+                        </li>
+                        <li class="hd-nav-list3" data-toggle="true">
+                            <a href="#">
+                            1元
+                            <i class="fa fa-caret-down" id="list3-font"></i>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skiphop-hd-search" data-toggle="true">
+                    <i class=" fa fa-list" id="hd-search-i"></i>
+                </div>
+                <!--各种下拉  -->
+                <div class="skiphop-hd-website">
+                    <!--这是一个模板坑  -->
+                </div>
+                <div class="skiphop-hd-region">
+                    <!--这是一个模板坑  -->
+                </div>
+                <div class="skiphop-hd-price">
+                    <ul>
+                        <li>
+                            <a href="javascript:;">全部价格</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">1-3元</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">3-5元</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">5-10元</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">10-15元</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">15元以上</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skiphop-hd-classify">
+                    <div class="skiphop-classify-search">
+                        <input type="text" placeholder="搜索您想要的凑单品" class="fa fa-search">
+                        <input type="button" value="搜索">
+                    </div>
+                    <div class="skiphop-classify-sort clearfix">
+                        <div class="sort">排序</div>
+                        <ul>
+                            <li><a href="#">销量</a></li>
+                            <li><a href="#">价格↑</a></li>
+                            <li><a href="#">价格↓</a></li>
+                        </ul>
+                    </div>
+                    <div class="hd-classify">
+                        <div class="classify">分类</div>
+                        <ul>
+                            <li><a href="#">全部</a></li>
+                            <li><a href="#">家居</a></li>
+                            <li><a href="#">数码</a></li>
+                            <li><a href="#">办公</a></li>
+                            <li><a href="#">个护</a></li>
+                            <li><a href="#">食品</a></li>
+                            <li><a href="#">母婴</a></li>
+                            <li><a href="#">服饰</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="skiphop-list-bd">
+                <!--这是一个模板坑  -->
+            </div>
+        </div>
+    </div>
+    <!--build:footer-->
+    <!--endbuild-->
+    <script type="text/template" id="skiphop-getShop">
+        <ul>
+            {{each $data getshop i}}
+            <li>
+                <a href="javascript:;" data-shopId="{{getshop.shopId}}" class="getShopID">{{getshop.shopName}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    <script type="text/template" id="skiphop-getArea">
+        <ul>
+            {{each $data getArea i}}
+            <li>
+                <a href="javascript:;" data-getArea="{{getArea.areaId}}" class="getAreaID">{{getArea.areaName}}</a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    <script type="text/template" id="skiphop-getList">
+        <ul class="clearfix">
+            {{each $data getList i}}
+            <li>
+                <a href="javascript:void(0);">
+                    <img src="{{getList.productImg}}" alt="">
+                    <p>{{getList.productName}}</p>
+                    <p style="color:red;font-size:20px;">{{getList.productPrice}}</p>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    <!-- 插件 -->
+    <script src="/dist/js/lib.js "></script>
+    <script src="/dist/js/skiphop/skiphop-interface.js"></script>
+    <!-- <script>
+        // 商城栏
+        $(".hd-nav-list1").on("click", function() {
+                if ($(this).attr("data-toggle") == "true") {
+                    $("#list1-font").prop("class", "fa fa-caret-up");
+                    $(".skiphop-hd-website").css("display", "block");
+                    $(this).attr("data-toggle", "false")
+                } else {
+                    $("#list1-font").prop("class", "fa fa-caret-down");
+                    $(".skiphop-hd-website").css("display", "none");
+                    $(this).attr("data-toggle", "true");
+                }
+            })
+            // 地区栏
+        $(".hd-nav-list2").on("click", function() {
+                if ($(this).attr("data-toggle") == "true") {
+                    $("#list2-font").prop("class", "fa fa-caret-up");
+                    $(".skiphop-hd-region").css("display", "block");
+                    $(this).attr("data-toggle", "false ")
+                } else {
+                    $("#list2-font").prop("class", "fa fa-caret-down");
+                    $(".skiphop-hd-region").css("display", "none");
+                    $(this).attr("data-toggle", "true");
+                }
+            })
+            // 价格栏
+        $(".hd-nav-list3").on("click", function() {
+                if ($(this).attr("data-toggle") == "true") {
+                    $("#list3-font").prop("class", "fa fa-caret-up");
+                    $(".skiphop-hd-price").css("display", "block");
+                    $(this).attr("data-toggle", "false")
+                } else {
+                    $("#list3-font").prop("class", "fa fa-caret-down");
+                    $(".skiphop-hd-price").css("display", "none");
+                    $(this).attr("data-toggle", "true");
+                }
+            })
+            // 分类栏
+        $(".skiphop-hd-search").on("click", function() {
+            if ($(this).attr("data-toggle") == "true") {
+                $("#hd-search-i").prop("class", "fa fa-times");
+                $(".skiphop-hd-classify").css("display", "block");
+                $(this).attr("data-toggle", "false")
+            } else {
+                $("#hd-search-i").prop("class", "fa fa-list");
+                $(".skiphop-hd-classify").css("display", "none");
+                $(this).attr("data-toggle", "true");
+            }
+            // Example of times
+        });
+        // ==============获取店铺==================
+        function getShop() {
+            $.get('http://139.199.192.48:9090/api/getgsshop', function(data) {
+                $('.skiphop-hd-website').html(template('skiphop-getShop', data.result));
+            });
+
+        }
+        getShop();
+        // ==============获取区域==================
+        function getArea() {
+            $.get('http://139.199.192.48:9090/api/getgsshoparea', function(data) {
+                $('.skiphop-hd-region').html(template('skiphop-getArea', data.result));
+            })
+
+        }
+        getArea();
+        // ================================
+        function getProduct() {
+            $.get('http://139.199.192.48:9090/api/getgsproduct', {
+                shopid: shopids,
+                areaid: areaids
+            }, function(data) {
+                console.log(data);
+                $(".skiphop-list-bd").html(template('skiphop-getList', data.result));
+            })
+        }
+        var shopids = 0;
+        var areaids = 0;
+        getProduct();
+        // ==========================
+        $('.skiphop-hd-website').on('click', '.getShopID', function() {
+            shopids = $(this).attr("data-shopId");
+            getProduct();
+            $('.hd-nav-list1').html($(this).text() + '&nbsp;<i class="fa fa-caret-down" id="list1-font"></i>');
+            $(".skiphop-hd-website").css("display", "none");
+            $('.hd-nav-list1').attr("data-toggle", "true");
+            $("#list1-font").prop("class", "fa fa-caret-down");
+        })
+        $('.skiphop-hd-region').on('click', '.getAreaID', function() {
+            areaids = $(this).attr("data-getArea");
+            console.log(shopids, areaids);
+            getProduct();
+            $('.hd-nav-list2').html($(this).text().slice(0, 2) + '&nbsp;<i class="fa fa-caret-down" id="list2-font"></i>');
+            $(".skiphop-hd-region").css("display", "none");
+            $('.hd-nav-list2').attr("data-toggle", "true");
+            $("#list2-font").prop("class", "fa fa-caret-down");
+        });
+        // ========================
+        $('.skiphop-hd-price').on('click', 'a', function() {
+            $('.hd-nav-list3').html($(this).text() + '&nbsp;<i class="fa fa-caret-down" id="list3-font"></i>');
+            $(".skiphop-hd-price").css("display", "none");
+            $('.hd-nav-list3').attr("data-toggle", "true");
+            $("#list3-font").prop("class", "fa fa-caret-down");
+        });
+    </script> -->
+</body>
+
+</html>

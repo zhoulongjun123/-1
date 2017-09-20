@@ -1,0 +1,33 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>商品详情</title><link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"><link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="/dist/css/comparison/details.css"></head><body><div class="in-hearder clearfix"><div class="hd-left pull-left"><a href="javascript:;"><img src="/public/images/header_logo.png" alt=""></a></div><div class="hd-right pull-right"><a href="javascript:;"><img src="/public/images/header_app.png" alt=""></a></div></div><div class="hd-seach"><div class="sc-right"><input type="search" placeholder="请输入你要比价的商品" name="" value=""></div><div class="sc-left"><input type="button" value="搜索"></div></div><div class="screening clearfix"></div><div class="message"></div><div class="eva clearfix"></div><div class="more"><a href="javascript:;">查看更多评价</a></div><footer><div class="login_handle"><a href="javascript:;" class="login"><span>登录</span> </a><a href="javascript:;" class="register"><span>注册</span> </a><a href="javascript:;" class="back_to_top"><span>返回顶部</span></a></div><div class="footer_nav"><p><a href="javascript:;">手机APP下载</a> <a href="javascript:;">慢慢买手机版</a>--掌上比价平台</p><a>m.manmanbuy.com</a></div></footer><script id="scr-tpl" type="text/template"><a href="/dist/index.html">首页&nbsp;> </a>
+        <a href="/dist/html/public/list.html?categoryId={{categoryId}}">&nbsp;{{taxon}} &nbsp;> </a>
+        <a href="javascript:;"> &nbsp;{{name}}&nbsp;></a>
+        <input type="button" name="" value="筛选" class="pull-right"></script><script id="mes-tpl" type="text/template"><div class="tit">{{productName}}</div>
+        <div class="photo">
+            {{@productImg}}
+        </div></script><script id="eva-tpl" type="text/template"><ul>
+            <li><a herf="javascript:;">比价购买</a></li>
+            <li><a herf="javascript:;">产品参数</a></li>
+            <li><a class='last' herf="javascript:;">评价(2322)</a></li>
+        </ul>
+        {{@bjShop}}
+        <div class="t">网友评价</div>
+        <div class="content clearfix">
+            {{each result item i}}
+            <div class="top">
+                <div class="t_left pull-left">{{item.comName}}</div>
+                <div class="t_right pull-right">{{item.comTime}}</div>
+            </div>
+            <div class="t_center">
+                <div class="t_left pull-left">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                </div>
+                <div class="t_right pull-right">{{item.comFrom}}</div>
+            </div>
+            <div class="est">{{item.comContent}} </div>
+            <div class="reply">回复</div>
+            {{/each}}
+        </div></script></body><script src="/dist/js/lib.js"></script><script src="/dist/js/comparison/details.js"></script></html>

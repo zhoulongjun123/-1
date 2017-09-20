@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>白菜价</title><link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"><link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="/dist/css/white/baicaijia.css"></head><body><div class="sace_view"><header><a href="/dist/index.html" class="save_back"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><div class="save_title"><h1>白菜价-淘宝内部券</h1></div><div class="save_app_down"><i></i></div></header></div><div class="bcj_nav"><ul id="nav_list" class="clearfix"></ul></div><div class="bcj_list"><ul id="common_list"></ul></div><div class="backTop"><span class="glyphicon glyphicon-menu-up"></span></div><footer><div class="login_handle"><a href="javascript:;" class="login"><span>登录</span> </a><a href="javascript:;" class="register"><span>注册</span> </a><a href="javascript:;" class="back_to_top"><span>返回顶部</span></a></div><div class="footer_nav"><p><a href="javascript:;">手机APP下载</a> <a href="javascript:;">慢慢买手机版</a>--掌上比价平台</p><a>m.manmanbuy.com</a></div></footer><script type="text/template" id="nav_tpl">{{each $data navs i}}
+        <li class="pull-left">
+            <a class="btn_nav" data-id="{{navs.titleId}}" href="javascript:;">{{navs.title}}</a>
+        </li>
+        {{/each}}</script><script type="text/template" id="common_tpl">{{each $data commons i}}
+        <li class="clearfix">
+            <!-- 图片 -->
+            <div class="bck_list_img pull-left">
+                <!-- <img src="/public/images/mimi.png" alt=""> -->
+                {{@commons.productImg}}
+            </div>
+            <!-- 内容 -->
+            <div class="bck_list_init pull-left">
+                {{@commons.productName}}
+                <div class="init_pri">
+                    {{@commons.productPrice}}
+                </div>
+                <div class="init_per">
+
+                    {{@commons.productCouponRemain}}
+                    <!-- <div class="init_bar"></div>
+                    <div class="init_tipNum">已领82张</div> -->
+                </div>
+                <div class="init_buy">
+                    <!-- <a href="javascript:;">点此领取15元优惠券</a> -->
+                    {{@commons.productCoupon}}
+                    <!-- <a class="init_order">下单链接</a> -->
+                    {{@commons.productHref}}
+                </div>
+            </div>
+        </li>
+        {{/each}}</script><script src="/dist/js/lib.js"></script><script src="/dist/js/white/baicaijia.js"></script></body></html>

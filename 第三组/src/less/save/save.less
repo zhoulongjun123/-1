@@ -1,0 +1,200 @@
+@import '../base.less';
+@import '../common/footer.less';
+
+
+/* 头部 */
+header{
+    width: 100%;
+    height: 44px;
+    background-color: #ff841d;
+    position: relative;
+    overflow: hidden;
+    .save_back{
+        width: 100px;
+        height: 100%;
+        position: absolute;
+        left:0;
+        top: 0;
+        span{
+            padding-top: 9px;
+            padding-left: 12px;
+            font-size: 22px;
+            color: #fff;
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            // background-image: url(/public/images/icon_bar.png);
+            // background-position: -208px -22px;
+        }
+    };
+    .save_title{
+        width: 100%;
+        padding:0 100px;            
+        h1{
+            line-height: 44px;
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 0;
+        }
+    }
+    .save_app_down{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100px;
+        height: 100%;
+        i{
+            margin-left: 46px;
+            margin-top: 5px;
+            line-height: 44px;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-image: url(/public/images/header_app.png);
+            background-size: 34px 34px;
+            background-repeat: no-repeat;
+            
+        }
+    }
+} 
+
+/* 商品列表 */
+.save_list{
+    width: 100%;
+    ul{
+        width: 100%;
+        li{
+            box-sizing: content-box;
+            width: 100%;
+            height: 100px;
+            margin: 14px 0 28px;
+            // background-color: #999;
+            position: relative;
+            a{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                .save_list_img{
+                    margin: 0 10px 0 8px;
+                    width: 100px;
+                    height: 100px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background-color: red;
+                    img{
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+                .save_list_message{
+                    width: 100%;
+                    position: relative;
+                    padding-left: 118px;
+                    .save_message_head{
+                        font-size: 15px;
+                        word-break: break-all;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        span{
+                            display: block;
+                            color:#ff841d;
+                            word-break: break-all;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                        }
+                    }
+                    .save_message_from{
+                        font-size: 12px;
+                        width: 100%;
+                        position: absolute;
+                        top:80px;
+                        .save_comment{
+                             float: right;
+                             padding-right: 128px;
+                        }
+                    }
+                    
+                    
+                }
+                
+            }
+        }
+    }
+}
+
+/* 商品列表控制器 */
+.save_list_handle{
+    height: 74px;
+    padding-top: 20px;
+    background-color: #f2f2f2;
+    .list_handle_left{
+        height: 100%;
+        .left_handel_btn{
+            width: 84px;
+            height: 35px;
+            margin: 0 auto;
+            background-color: #ddd;
+            border: 1px solid #bababa;
+            border-radius: 7px;
+            text-align: center;
+            line-height: 35px;
+        }
+    }
+    .list_handle_right{
+        height: 100%;
+        .right_handel_btn{
+            width: 84px;
+            height: 35px;
+            margin: 0 auto;
+            background-color: #ddd;
+            border: 1px solid #bababa;
+            border-radius: 7px;
+            text-align: center;
+            line-height: 35px;
+        }
+    }
+    .list_handle_center{
+        overflow: hidden;
+        // border-left: 1px solid #222;
+        // border-right: 1px solid #222;
+        form{
+            margin: 0 auto;
+                width: 80%;
+                height: 32px;
+                
+            select{
+                width: 100%;
+                height: 32px;
+                border: 1px solid #bababa;
+                option{
+                    text-align: center;
+                    color: #000;
+                }
+            }
+        }
+        
+    }
+}
+
+/* 路径显示 */
+.path_view{
+    width: 100%;
+    height: 36px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    a{
+        display: inline-block;
+        font-size: 12px;
+        line-height: 36px;
+        padding-left: 8px;
+    }
+}
+

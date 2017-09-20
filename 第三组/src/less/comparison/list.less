@@ -1,0 +1,72 @@
+@import '../base.less';
+@import '../../../src/less/common/hearder.less';
+@import '../../../src/less/common/footer.less';
+.screening{
+  height: 30px;
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 30px;
+  padding:0 4px;
+  a{
+    float: left;
+  }
+  input[type='button']{
+    width: 50px;
+    height: 18px;
+    line-height: 18px;
+    margin-top:6px; 
+    border-radius: 4px;
+  }
+}
+// 商品列表
+.ct_list{
+  .media-list{
+ li{
+   padding: 15px 1%;
+   border-bottom: 1px solid #e6e6e6;
+    img{
+    width: 100px !important;
+    height: 100px !important;
+  }
+  .media-body{
+    .media-heading{
+   
+          color: #333333;
+    word-break: break-all;
+    font-size: 15px;
+    line-height: 28px;
+    height: 56px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+     
+    }
+    .price{
+      color: #ed0000;
+      font-size: 18px;
+      margin-top: 6px;
+      margin-bottom: 2px;
+      font-style: normal;
+    }
+    .other{
+      color: #a1a1a1;
+      // line-height: ;
+      .sales{
+        margin-left: 20px
+      }
+    }
+  }
+ }
+}
+}
+// 翻页
+.flip{
+  padding: 0 10%;
+  .pager{
+    li{
+      .drop-down{
+        border: 1px solid #bababa; font-size: 16px; height: 32px;width: 20%;
+      }
+    }
+  }
+}

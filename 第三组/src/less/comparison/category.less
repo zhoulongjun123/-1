@@ -1,0 +1,55 @@
+@import '../base.less';
+@import '../../../src/less/common/hearder.less';
+@import '../../../src/less/common/footer.less';
+// 商品列表
+.view{
+  padding:5px 5px 0 5px;
+  
+  .fl_t{
+   
+    a{
+      
+      height: 40px;
+      line-height: 40px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #000;
+      padding-left: 16px;
+      border:1px solid #ccc;
+      border-bottom: none;
+      background: url('/public/images/arrow1.gif') right center no-repeat #ebebeb;
+    }
+     &:last-child{
+    border-bottom:1px solid #ccc;
+  }
+  }
+  .fl_all{
+    display: none;
+    li{
+      width: 33.33333%;
+      float: left;
+     
+      a{
+       width: 100%;
+        height: 40px;
+        line-height: 40px;
+         border-left: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+      }
+      &:nth-child(3n){
+          border-right: 1px solid #ccc;
+        }
+      &:last-child{
+         border-right: 1px solid #ccc;
+      }
+    }
+  }
+}
+.line{
+  padding:0 5px;
+  margin-bottom: 20px;
+  .small{
+  border: 1px solid #ccc;
+  }
+}

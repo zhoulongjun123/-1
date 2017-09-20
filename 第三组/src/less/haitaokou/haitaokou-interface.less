@@ -1,0 +1,222 @@
+@import '../base.less';
+*{
+    margin:0;
+    padding:0;
+}
+ul,ol,li{
+    margin:0;
+    padding:0;
+}
+body{
+    width: 100%;
+    background-color: #fff;
+}
+.haitao-interface-header{
+    width:100%;
+    height:44px;
+    background-color: #ff841d;
+    position: relative;
+    color:#fff;
+    a{
+         position: absolute;
+         height:44px;
+         line-height:44px;
+         color:#fff;
+    }
+    a.interface-header-a1{
+        top:0;
+        left:20px;
+        font-size: 32px;
+        background: url(../../../public/images/arrow-right.svg);
+        width:17px;
+        height:17px;
+    }
+    h1{
+        text-align: center;
+        height:44px;
+        line-height:44px;
+        font-size:20px;
+        margin:0;
+        padding:0;
+    }
+    a.interface-header-a2{
+        top:0;
+        right:10px;
+        width:50px;
+        height:44px;
+        padding-top:6px;
+        box-sizing: border-box;
+        img{
+            width:60%;
+        }
+    }
+}
+.haitao-interface-content{
+    margin:0 auto;
+    padding-top:20px;
+    .media{
+       width:90%;
+       margin:20px auto 0;
+       
+      .interface-content-pi{
+        width:110px;
+        a{
+           width:100%;
+            img{
+                width:100px;
+                height:100px;
+            }
+        }
+    }
+    .interface-content-text{
+        h4{
+            font-size:15px;
+            height:72px;
+            line-height:19px;
+            overflow: hidden;
+            span{
+                color: #ff6c00;
+            }
+        }
+        p{
+            color: #a1a1a1;
+            font-size: 12px;
+            span{
+                float:right;
+            }
+        }
+      }
+    }
+    
+}
+// =================================
+    .haitao-bottom-btn{
+        width:100%;
+        height:70px;
+        background-color: #f2f2f2;
+        padding-top:20px;
+        position: relative;
+        table{
+            tr{
+                td{
+                    width:138px;
+                    height:34px;
+                    a{
+                        width:82px;
+                        height:33px;
+                        line-height: 33px;
+                        background-color: #e7e7e7;
+                        border:1px solid #cdcdcd;
+                        box-sizing: border-box;
+                        border-radius: 6px;
+                        text-align: center;
+                    }
+                    .bottom-btn-pre{
+                        margin-left: 20px;
+                    }
+                    .haitao-bottom-opt{
+                        width:130px;
+                        height:34px;
+                    }
+                    .bottom-btn-next{
+                        margin-right: 20px;
+                        float: right;
+                    }
+                }
+               .haitao-bottom-td1{
+                   position: absolute;
+                   left:0px;
+               }
+               .haitao-bottom-td2{
+                   position: absolute;
+                   left:50%;
+                   margin-left:-65px;
+                }
+             .haitao-bottom-td3{
+                    position: absolute;
+                    right:0px;
+                }
+            }
+        }
+        
+    }
+// =================================
+.haitao-bottoms{
+    width:100%;
+    .bottoms-nav{
+        width:100%;
+        height:38px;
+        background-color: #efefef;
+        border-top: 1px solid #c7c7c7;
+        border-bottom: 1px solid #c7c7c7;
+        ul{
+            padding-left:10px;
+            li{
+                float:left;
+                text-align: center;
+                height:38px;
+                line-height:38px;
+            }
+        }
+    }
+}
+/* 底部 */
+footer{
+    padding-top: 10px;
+    width: 100%;
+    .login_handle{
+        width: 100%;
+        height: 34px;
+        background-color: #efefef;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        a{
+            height: 100%;
+            text-align: center;
+            line-height: 34px;
+            display: inline-block;
+            span{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .login{
+            width: 30%;
+        }
+        .register{
+            width: 30%;
+            border-left: 1px solid #c4c4c4;
+            border-right: 1px solid #c4c4c4;
+        }
+        .back_to_top{
+            width: 36%;
+        }
+    }
+    .footer_nav{
+        width: 100%;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        text-align: center;
+        p{
+            width: 100%;
+           text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 0;
+            a{
+                display: inline-block;
+                font-size: 12px;
+            }
+            a:nth-child(1){
+                color: red;
+            }
+            a:nth-child(2){
+                color: #000;
+            }
+        }
+        a{
+            font-size: 12px;
+        }
+    }
+
+} 

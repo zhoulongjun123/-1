@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>分类</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/dist/css/comparison/category.css">
+</head>
+
+<body>
+    <!--慢慢买头部和搜索框-->
+    <!--build:hearder-->
+    <!--endbuild-->
+    <!--商品列表-->
+    <div id='v_title' class="view clearfix">
+        <!--商品标题的坑-->
+    </div>
+    <div class="line">
+        <div class="small"></div>
+    </div>
+    <!--build:footer-->
+    <!--endbuild-->
+    <script id='title-tpl' type='text/template'>
+        {{each $data titleTpl i}}
+        <div data-id='{{titleTpl.titleId}}' class="fl_t">
+            <a href="javascript:;">{{titleTpl.title}}</a>
+        </div>
+        <ul class="fl_all">
+            <!--列表的坑-->
+        </ul>
+        <div class='clearfix'></div>
+        {{/each}}
+    </script>
+    <script id='cg_list_tpl' type='text/template'>
+        {{each $data list i}}
+        <li><a href="/dist/html/public/list.html?categoryId={{list.categoryId}}">{{list.category}}</a></li>
+        {{/each}}
+    </script>
+</body>
+<script src="/dist/js/lib.js"></script>
+<script src="/dist/js/comparison/category.js"></script>
+
+</html>

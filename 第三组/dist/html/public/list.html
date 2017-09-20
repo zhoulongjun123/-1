@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"><link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="/dist/css/comparison/list.css"><title>商品列表</title></head><body><div class="in-hearder clearfix"><div class="hd-left pull-left"><a href="javascript:;"><img src="/public/images/header_logo.png" alt=""></a></div><div class="hd-right pull-right"><a href="javascript:;"><img src="/public/images/header_app.png" alt=""></a></div></div><div class="hd-seach"><div class="sc-right"><input type="search" placeholder="请输入你要比价的商品" name="" value=""></div><div class="sc-left"><input type="button" value="搜索"></div></div><div id="headline" class="screening clearfix"></div><div id="ct_list" class="ct_list clearfix"></div><footer><div class="login_handle"><a href="javascript:;" class="login"><span>登录</span> </a><a href="javascript:;" class="register"><span>注册</span> </a><a href="javascript:;" class="back_to_top"><span>返回顶部</span></a></div><div class="footer_nav"><p><a href="javascript:;">手机APP下载</a> <a href="javascript:;">慢慢买手机版</a>--掌上比价平台</p><a>m.manmanbuy.com</a></div></footer><script id="title-tpl" type="text/template"><a href="/dist/index.html">首页&nbsp;> </a>
+        <a href="/dist/html/public/category.html?indexmenuId=0">&nbsp;全部分类 &nbsp;> </a>
+        <a href="/dist/html/public/list.html?categoryId={{categoryId}}"> &nbsp;{{category}}&nbsp;></a>
+        <input type="button" name="" value="筛选" class="pull-right"></script><script id="ct_list_tpl" type="text/template"><ul class="media-list">
+            {{each result item i}}
+            <li class="media">
+                <a href="/dist/html/public/details.html?productId={{item.productId}}&taxon={{taxon}}&name={{item.brandName}}">
+                    <div class="media-left">
+                        <!--<img class="media-object" src="/public/images/mimi.png" alt="...">-->
+                        {{@ item.productImg}}
+                    </div>
+                    <div class="media-body">
+                        <div class="media-heading">{{item.brandName}} {{item.productName}}</div>
+                        <div class="price">
+                            {{item.productPrice}}
+                        </div>
+                        <div class="other">
+                            <div class="mall pull-left">{{item.productQuote}}</div>
+                            <div class="sales pull-left">{{item.productCom}}</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+        <!--翻页-->
+        <div class="flip">
+            <ul class="pager">
+                <li class="previous"><a href="javascript:;"> 上一页</a></li>
+                <li>
+                    <select id="selPage" name="ff" class="drop-down">
+                        {{each pageArr value index}}
+                        <option value="{{(index+1)}}">{{(index+1)}}/{{totalPage}}</option>
+                        {{/each}}
+               </select>
+                </li>
+                <li class="next"><a href="javascript:;">下一页</a></li>
+            </ul>
+        </div></script></body><script src="/dist/js/lib.js"></script><script src="/dist/js/comparison/list.js"></script></html>

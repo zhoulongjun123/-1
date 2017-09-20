@@ -1,0 +1,337 @@
+@import '../base.less';
+*{
+    margin:0;
+    padding:0;
+}
+ul,ol,li{
+    margin:0;
+    padding:0;
+}
+.haitao-interface-header{
+    width:100%;
+    height:44px;
+    background-color: #ff841d;
+    position: relative;
+    color:#fff;
+    a{
+         position: absolute;
+         height:44px;
+         line-height:44px;
+         color:#fff;
+    }
+    a.interface-header-a1{
+        top:0;
+        left:20px;
+        font-size: 32px;
+        background: url(../../../public/images/arrow-right.svg);
+        width:17px;
+        height:17px;
+    }
+    h1{
+        text-align: center;
+        height:44px;
+        line-height:44px;
+        font-size:20px;
+        margin:0;
+        padding:0;
+    }
+    a.interface-header-a2{
+        top:0;
+        right:10px;
+        width:50px;
+        height:44px;
+        padding-top:6px;
+        box-sizing: border-box;
+        img{
+            width:60%;
+        }
+    }
+}
+
+.skiphop-coudan-box{
+    width:100%;
+    background-color: #fff;
+    border-bottom: 1px solid #dadada;
+    .skiphop-box-list{
+        width:100%;
+        .skiphop-list-hd{
+            height:40px;
+            padding-right:40px;
+            position: relative;
+            border-bottom: 1px solid #dadada;
+            .skiphop-hd-nav{
+                ul{
+                    li{
+                        height:40px;
+                        line-height:40px;
+                        width:33%;
+                        float:left;
+                        text-align: center;
+                        a{
+                            height:100%;
+                        }
+                     }
+                }
+            }
+            .skiphop-hd-search{
+                width:40px;
+                height:40px;
+                line-height:40px;
+                // background-color: #000;
+                position: absolute;
+                right:0;
+                border-left:1px solid #dadada;
+                text-align: center;
+            }
+            .skiphop-hd-website{
+                width:100%;
+                position: absolute;
+                top:40px;
+                z-index: 30;
+                background-color:#fff;
+                display: none;
+                ul{
+                    width:100%;
+                    li{
+                        width:100%;
+                        height:40px;
+                        padding:0 6px;
+                        border-bottom: 1px solid #ededed;
+                        box-sizing: border-box;
+                        a{
+                            width: 100%;
+                            height:40;
+                            line-height:40px;
+                            color: #5a5a5a;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            .skiphop-hd-region{
+                width:100%;
+                position: absolute;
+                top:40px;
+                z-index: 30;
+                background-color:#fff;
+                display: none;
+                ul{
+                    width:100%;
+                    li{
+                        width:100%;
+                        height:40px;
+                        padding:0 6px;
+                        border-bottom: 1px solid #ededed;
+                        box-sizing: border-box;
+                        a{
+                            width: 100%;
+                            height:40;
+                            line-height:40px;
+                            color: #5a5a5a;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            .skiphop-hd-price{
+                width:100%;
+                position: absolute;
+                top:40px;
+                z-index: 30;
+                background-color:#fff;
+                display: none;
+                ul{
+                    li{
+                        width:100%;
+                        height:40px;
+                        padding:0 6px;
+                        border-bottom: 1px solid #ededed;
+                        box-sizing: border-box;
+                        a{
+                            width: 100%;
+                            height:40;
+                            line-height:40px;
+                            color: #5a5a5a;
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+            .skiphop-hd-classify{
+                background-color: #f7f7f7;
+                 width:100%;
+                position: absolute;
+                top:40px;
+                z-index: 30;
+                padding:10px 10px 0;
+                background-color:#fff;
+                display: none;
+                .skiphop-classify-search{
+                    position: relative;
+                    padding-right: 40px;
+                    input[type="text"]{
+                        height:35px;
+                        border:1px solid #eeeeee;
+                    }
+                    input[type="button"]{
+                        width:30px;
+                        height:35px;
+                        position: absolute;
+                        right: 0;
+                        top:0;
+                        background-color: #fff;
+                    }
+                }
+                .skiphop-classify-sort{
+                    .sort{
+                        width:100%;
+                        height:50px;
+                        padding-top:20px;
+                        font-size: 16px;
+                        color: #000;
+                    }
+                    ul{
+                        width:80%;
+                        li{
+                            width:33%;
+                            float:left;
+                            height:32px;
+                            line-height:32px;
+                            text-align: center;
+                            padding-right: 10px;
+                            a{
+                                height:32px;
+                                width: 100%;
+                                color: #5a5a5a;
+                                font-size: 12px;
+                                box-sizing: border-box;
+                                border:1px solid #eaeaea;
+                            }
+                        }
+                    }
+                }
+                .hd-classify{
+                    width: 100%;
+                    .classify{
+                        width:100%;
+                        height:50px;
+                        padding-top:20px;
+                        font-size: 16px;
+                        color: #000;
+                    }
+                    ul{
+                        width:100%;
+                        margin-bottom: 10px;
+                        li{
+                            width:25%;
+                            float:left;
+                            height:32px;
+                            line-height:32px;
+                            text-align: center;
+                            padding-right: 10px;
+                            margin-bottom: 10px;
+                            a{
+                                height:32px;
+                                width: 100%;
+                                color: #5a5a5a;
+                                font-size: 12px;
+                                box-sizing: border-box;
+                                border:1px solid #eaeaea;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .skiphop-list-bd{
+            width:100%;
+            ul{
+                width:100%;
+                padding-right: 10px;
+                background-color: #f1f1f1;
+                li{
+                    width:50%;
+                    float:left;
+                    padding-top:10px;
+                    padding-left:10px;
+                    a{
+                        width:100%;
+                        background-color: #ffffff;
+                        img{
+                            width:100%;
+                        }
+                        p{
+                            width:100%;
+                            height:20px;
+                            line-height:20px;
+                            background-color: #fff;
+                            overflow: hidden;
+                            margin:0;
+                            padding-left:4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* 底部 */
+footer{
+    padding-top: 10px;
+    width: 100%;
+    .login_handle{
+        width: 100%;
+        height: 34px;
+        background-color: #efefef;
+        border-top: 1px solid #c4c4c4;
+        border-bottom: 1px solid #c4c4c4;
+        a{
+            height: 100%;
+            text-align: center;
+            line-height: 34px;
+            display: inline-block;
+            span{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .login{
+            width: 30%;
+        }
+        .register{
+            width: 30%;
+            border-left: 1px solid #c4c4c4;
+            border-right: 1px solid #c4c4c4;
+        }
+        .back_to_top{
+            width: 36%;
+        }
+    }
+    .footer_nav{
+        width: 100%;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        text-align: center;
+        p{
+            width: 100%;
+           text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 0;
+            a{
+                display: inline-block;
+                font-size: 12px;
+            }
+            a:nth-child(1){
+                color: red;
+            }
+            a:nth-child(2){
+                color: #000;
+            }
+        }
+        a{
+            font-size: 12px;
+        }
+    }
+
+} 

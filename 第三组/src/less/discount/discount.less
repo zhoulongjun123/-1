@@ -1,0 +1,170 @@
+@import '../base.less';
+@import '../../../src/less/common/footer.less';
+
+
+body{
+    color: #000;
+    font-family: arial;
+    background: #FFF;
+    overflow-x: hidden;
+}
+
+/* 清楚浮动 */
+.clearfix:after{
+    content: '';
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    width: 0;
+}
+
+
+/* 头部 */
+header{
+    width: 100%;
+    height: 44px;
+    background-color: #ff841d;
+    position: relative;
+    overflow: hidden;
+    .save_back{
+        width: 100px;
+        height: 100%;
+        position: absolute;
+        left:0;
+        top: 0;
+        span{
+            padding-top: 9px;
+            padding-left: 12px;
+            font-size: 22px;
+            color: #fff;
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            // background-image: url(/public/images/icon_bar.png);
+            // background-position: -208px -22px;
+        }
+    }
+    .save_title{
+        width: 100%;
+        padding:0 100px;            
+        h1{
+            line-height: 44px;
+            font-size: 20px;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            margin-top: 0;
+        }
+    }
+    .save_app_down{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100px;
+        height: 100%;
+        i{
+            margin-left: 46px;
+            margin-top: 5px;
+            line-height: 44px;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-image: url(/public/images/header_app.png);
+            background-size: 34px 34px;
+            background-repeat: no-repeat;
+            
+        }
+    }
+} 
+
+/* 商品列表 */
+.discount_list{
+    width: 100%;
+    ul{
+        width: 100%;
+        li{
+            width: 50%;
+            float: left;
+            padding:10px 0 0 10px;
+            border-right: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        a{
+            width: 100%;
+            .discount_list_img{
+                width: 140px;
+                height: 140px;
+                margin: 10px auto;
+                overflow: hidden;
+                img{
+                    width: 140px;
+                    height: 140px;
+                }      
+            }
+            .discount_list_title{
+                // margin-top: 12px;
+                font-size: 14px;
+                padding: 0 8px;
+                height: 36px;
+                span{
+                    color: #000;
+                    font-weight: 600;
+                    word-break: break-all;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+            .discount_list_subtit{
+                height: 18px;
+                line-height: 18px;
+                margin: 4px 8px 0 8px;
+                color: #ff6c00;
+                word-break: break-all;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .discount_list_info{
+                margin: 6px 8px;
+                font-size: 12px;
+                color: #a1a1a1;
+                line-height: 24px;
+                word-break: break-all;
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+    }
+    
+}
+
+/* 加载 */
+.loading,{
+    width: 100%;
+    height: 30px;
+    
+    img{
+
+        width: 20px;
+        height: 20px;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+    // border-top: 1px solid #666;
+    // border-bottom: 1px solid #666;
+}
+.nothing{
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    display: none;
+}
+

@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>省钱控</title><link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"><link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="/dist/css/save/save.css"></head><body><div class="sace_view"><header><a href="/dist/index.html" class="save_back"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><div class="save_title"><h1>省钱控 - 最新优惠</h1></div><div class="save_app_down"><i></i></div></header><div class="save_list"><ul id="save_list_form"></ul></div><div class="save_list_handle"><div class="container"><div class="row page_handle"><div class="col-xs-4 page_handlee list_handle_left"><div class="left_handel_btn">上一页</div></div><div class="col-xs-4 list_handle_center"><form action=""><select name="" id="save_select"></select></form></div><div class="col-xs-4 page_handlee list_handle_right"><div class="right_handel_btn">下一页</div></div></div></div></div><div class="path_view"><a href="/dist/index.html">首页</a> > <a href="javascript:;">省钱控</a></div><footer><div class="login_handle"><a href="javascript:;" class="login"><span>登录</span> </a><a href="javascript:;" class="register"><span>注册</span> </a><a href="javascript:;" class="back_to_top"><span>返回顶部</span></a></div><div class="footer_nav"><p><a href="javascript:;">手机APP下载</a> <a href="javascript:;">慢慢买手机版</a>--掌上比价平台</p><a>m.manmanbuy.com</a></div></footer></div><script type="text/tpl" id="save_list_form1">{{each $data list i}}
+        <li>
+            <a href="/dist/html/public/save_commodity.html?productid={{list.productId}}">
+                <div class="save_list_img">
+                    {{#list.productImgSm}}
+                </div>
+                <div class="save_list_message">
+                    <div class="save_message_head">
+                        {{list.productName}}
+                        <span>{{list.productPinkage}}</span>
+                    </div>
+                    <div class="save_message_from">
+                        <span class="save_mall">{{list.productFrom}} | {{list.productTime}}</span>
+                        <span class="save_comment">
+                             {{list.productComCount}}
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}</script><script type="text/tpl" id="save_list_page">{{each item page i}}
+        <option value="{{i+1}}">{{page}}</option>
+        {{/each}}</script><script src="/dist/js/lib.js"></script><script src="/dist/js/save/save.js"></script></body></html>

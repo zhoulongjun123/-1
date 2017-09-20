@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠卷</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/dist/css/discounts/discounts-interface.css">
+</head>
+
+<body>
+    <div class="haitao-interface-header">
+        <a href="/dist/index.html" class="interface-header-a1"><i class="fa fa-angle-left"></i></a>
+        <h1>优惠券标题</h1>
+        <a href="javascript:void(0);" class="interface-header-a2"><img src="/public/images/header_app.png" alt="" /></a>
+    </div>
+    <div class="discounts-content">
+        <!--这是一个模板坑  -->
+    </div>
+    <div class="haitao-bottoms">
+        <div class="bottoms-nav">
+            <ul>
+                <li class="bottoms-nav-list1"><a href="/dist/index.html">首页&nbsp;>&nbsp;</a></li>
+                <li class="bottoms-nav-list1"><a href="/dist/html/public/moneyctrl.html">省钱控&nbsp;>&nbsp;</a></li>
+                <li class="bottoms-nav-list1"><a href="/dist/html/public/haitaokousInterface.html">海淘折扣</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--build:footer-->
+    <!--endbuild-->
+    <!-- 插件 -->
+    <script type="text/template" id="discounts-interface-tml">
+        <ul class="clearfix">
+            {{each $data discounts i}}
+            <li>
+                <a href="{{discounts.couponLink}}?couponId={{discounts.couponId}}">
+                    <img src="{{discounts.couponImg}}" alt="------">
+                    <span>{{discounts.couponTitle}}</span>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </script>
+    <script src="/dist/js/lib.js"></script>
+    <script>
+        $.get('http://139.199.192.48:9090/api/getcoupon', function(data) {
+            $('.discounts-content').html(template("discounts-interface-tml", data.result));
+        })
+    </script>
+</body>
+
+</html>

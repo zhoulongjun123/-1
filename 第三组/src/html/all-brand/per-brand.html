@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>销量排行</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/dist/css/all-brand/per_brand.css">
+</head>
+
+<body>
+    <div class="per_brand">
+        <!-- 头部 -->
+        <div class="shop_header clearfix">
+            <!-- 头部logo -->
+            <a class="left" href="/dist/index.html">
+                <img src="/public/brand_images/header_logo.png" alt="">
+            </a>
+            <!-- 头部APP下载 -->
+            <a class="right" href="javascript:;">
+                <span class="pic">
+                </span>
+            </a>
+
+        </div>
+
+        <!-- 搜索框 -->
+        <div class="brand_search">
+            <input type="text" placeholder="请输入你想必价的商品">
+            <button>搜索</button>
+        </div>
+
+
+        <!-- 首页和品牌大全 -->
+        <div class="shop_banner">
+            <div class="banner_w clearfix">
+                <a href="/dist/index.html">首页</a> <i class="Myiconfont">&#xe600;</i><a href="/dist/html/public/brandTitle.html">品牌大全</a> <i class="Myiconfont">&#xe600;</i><a href="javascript:;">冷暖空调哪个品牌好</a>
+            </div>
+        </div>
+
+        <!-- 品牌标题 -->
+        <div id="brand_list_all" class="w1">
+
+            <!-- 品牌标题对应的十大品牌模板的坑 -->
+
+        </div>
+
+        <!-- 冷暖空调产品排行榜 -->
+        <div id="ranking_list" class="w2">
+
+            <!-- 冷暖空调产品排行榜模板的坑 -->
+
+        </div>
+        <!-- 冷暖空调最有用的用户评论 -->
+        <div id="per_list" class="w3">
+
+            <!-- 评论区模板引擎的坑 -->
+
+        </div>
+        <!-- 尾部 -->
+        <!-- build:footer -->
+        <!-- endbuild -->
+
+
+    </div>
+
+    <!-- 品牌标题对应的十大品牌的模板 -->
+    <script type="text/template" id="brand_list_tpl">
+        <div class="step1">
+            <div class="brand_title">
+                <h4>冷暖空调哪个品牌好</h4>
+            </div>
+
+            <!-- 品牌标题对应的十大品牌 -->
+            <div class="brand_cantier">
+                <ul class="inner_list" id="inner_list">
+                    {{each $data list i}}
+                    <li data-id="{{i}}">
+                        <a name='categoryId' class="clearfix" href="#" title="{{list.brandName}}">
+                            <span>{{i+1}}</span>
+                            <div class="inner">
+                                <div name='brandId' class="tit">{{list.brandName}}</div>
+                                <p>30全网销量 &nbsp;: &nbsp;{{list.brandInfo}}</p>
+                            </div>
+                            <i class="Myiconfont">&#xe600;</i>
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </script>
+
+    <!-- 冷暖空调产品排行榜的模板 -->
+    <script type="text/template" id="ranking_tpl">
+        <div class="step2">
+            <div class="brand_title">
+                <h4>冷暖空调产品排行榜</h4>
+            </div>
+            <div class="ranking_list">
+                {{each $data rk i}}
+                <div name='productListId' class="ranking">
+                    <a class="ranking_left" href="#">
+                        {{@rk.productImg}}
+                        <div class="media_body">
+                            <h4 data-id={{rk.productId}} value="{{rk.productId}}" class="rk_heading rk_id">{{rk.productName}}</h4>
+                            <div class="price clearfix">
+                                <span>{{rk.productPrice}}</span>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                            <div class="other">
+                                <span>报价{{rk.productQuote}}</span>
+                                <em>全网评论{{rk.productCom}}</em>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </script>
+
+    <!-- 评论区模板引擎 -->
+    <script type="text/template" id="per_tpl">
+        <div class="step3">
+            <div class="brand_title">
+                <h4>冷暖空调最有用的用户评论</h4>
+            </div>
+            <!-- 评论区内容 -->
+            <div class="conment_list">
+                {{each $data per i}} {{if i==2}}
+                <!-- 空调最新评论 -->
+                <div class="brand_title">
+                    <h4>冷暖空调最新评论</h4>
+                </div>
+                {{/if}}
+                <div class="conment">
+                    <a class="ranking_top" href="#">
+                        <img class="rk_pic" src="/public/brand_images/Thumb_2016050013560999704.png" alt="媒体对象">
+                        <div class="media_body">
+                            <h4 class="rk_heading">{{per.comFrom}}</h4>
+                        </div>
+                    </a>
+
+                    <a class="ranking_bt" href="javascript:;">
+                        <div class="name clearfix">
+                            {{per.comName}}：
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <i>{{per.comTime}}</i>
+                        </div>
+                        <div class="con">
+                            {{per.comContent}}
+                        </div>
+                    </a>
+                </div>
+                {{/each}}
+            </div>
+
+
+
+        </div>
+    </script>
+    <script src="/dist/js/lib.js"></script>
+    <script src="/dist/js/all-brand/per_brand.js"></script>
+    <!--<script src="/src/js/common/back_top.js"></script>-->
+</body>
+
+</html>

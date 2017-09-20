@@ -1,0 +1,31 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>国内折扣</title><link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"><link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css"><link rel="stylesheet" href="/dist/css/discount/discount_commodity.css"></head><body><div class="sace_view"><header><a href="/dist/html/public/inlanddiscount.html" class="save_back"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></a><div class="save_title"><h1>国内折扣</h1></div><div class="save_app_down"><i></i></div></header><div class="commodity_init"></div><div class="path_view clearfix"><a href="/dist/index.html">首页 &nbsp;></a> <a href="/dist/html/public/inlanddiscount.html">超值推荐 &nbsp;></a></div><footer><div class="login_handle"><a href="javascript:;" class="login"><span>登录</span> </a><a href="javascript:;" class="register"><span>注册</span> </a><a href="javascript:;" class="back_to_top"><span>返回顶部</span></a></div><div class="footer_nav"><p><a href="javascript:;">手机APP下载</a> <a href="javascript:;">慢慢买手机版</a>--掌上比价平台</p><a>m.manmanbuy.com</a></div></footer></div><script type="text/tpl" id="commondity_tpl"><!-- 商品标题 -->
+        <h3 class="commodity_title">
+            {{productName}}
+        </h3>
+        <!-- 价格 -->
+        <h4 class="commodity_value">
+            {{productPrice}}</h4>
+        <!-- 商品来自商城 -->
+        <div class="commodity_mall">
+            <span class="commodity_mall_form">{{productFrom}}</span>
+            <span class="commodity_add_time">{{productTime}}</span>
+            <span class="commodity_author">{{productTips}}</span>
+        </div>
+        <!-- 商品信息 -->
+        <div class="commodity_description clearfix">
+            <!-- 商品图片 -->
+            <div class="commodity_pic pull-right">
+                {{#productImg}}
+            </div>
+            <div class="commodity_conn">
+                {{productInfo}}
+
+            </div>
+        </div>
+        <div class="commodity_buy">
+            <a href="javascript:;">前往购买</a>
+        </div>
+        <!-- 商品评论 -->
+        <div class="commodity_comment">
+            {{#productComment}}
+        </div></script><script type="text/tpl" id="discount_path"><a href="javascript:;">{{productName}}</a></script><script src="/dist/js/lib.js"></script><script src="/dist/js/discount/discount_commodity.js"></script></body></html>

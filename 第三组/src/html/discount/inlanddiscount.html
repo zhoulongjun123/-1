@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>国内折扣</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/dist/css/discount/discount.css">
+</head>
+
+
+<body>
+    <div class="sace_view">
+        <!-- 头部 -->
+        <header>
+            <a href="/dist/index.html" class="save_back">
+                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+            </a>
+            <div class="save_title">
+                <h1>国内折扣</h1>
+            </div>
+            <div class="save_app_down">
+                <i></i>
+            </div>
+        </header>
+
+        <!-- 商品列表 -->
+        <div class="discount_list">
+            <ul class="clearfix discount_list_p">
+                <!-- 商品列表模板的坑 -->
+            </ul>
+        </div>
+
+        <div class="loading">
+            <img src="/public/images/loading.gif" alt="">
+        </div>
+        <div class="nothing">
+            没有更多数据了
+        </div>
+
+        <!-- 底部 -->
+        <!--build:footer-->
+        <!--endbuild-->
+
+    </div>
+    <!-- 商品列表模板 -->
+    <script type="text/tpl" id="discount_list_tpl">
+        {{each $data dis i}}
+        <li class='discount_list_list'>
+            <a href="/dist/html/public/discount_commodity.html?productid={{dis.productId}} ">
+                <div class="discount_list_img ">{{#dis.productImg}}</div>
+                <div class="discount_list_title ">
+                    <span>{{dis.productName}}</span>
+                </div>
+                <div class="discount_list_subtit ">{{dis.productPrice}}</div>
+                <div class="discount_list_info ">
+                    <div class="mall ">{{dis.productFrom}} | {{dis.productTime}}</div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script src="/dist/js/lib.js "></script>
+    <script src="/dist/js/discount/discount.js "></script>
+</body>
+
+</html>

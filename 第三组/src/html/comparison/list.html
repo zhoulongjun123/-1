@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/dist/css/comparison/list.css">
+    <title>商品列表</title>
+</head>
+
+<body>
+    <!--build:hearder-->
+    <!--endbuild-->
+    <!--筛选-->
+    <div id="headline" class="screening clearfix">
+        <!--标题的坑-->
+    </div>
+    <!--商品列表-->
+    <div id='ct_list' class="ct_list clearfix">
+        <!--商品列表的坑-->
+    </div>
+
+    <!--底部-->
+    <!--build:footer-->
+    <!--endbuild-->
+    <!--标题模板-->
+    <script id="title-tpl" type="text/template">
+        <a href="/dist/index.html">首页&nbsp;> </a>
+        <a href="/dist/html/public/category.html?indexmenuId=0">&nbsp;全部分类 &nbsp;> </a>
+        <a href="/dist/html/public/list.html?categoryId={{categoryId}}"> &nbsp;{{category}}&nbsp;></a>
+        <input type="button" name="" value="筛选" class="pull-right">
+    </script>
+    <!--商品列表模板-->
+    <script id="ct_list_tpl" type="text/template">
+        <ul class="media-list">
+            {{each result item i}}
+            <li class="media">
+                <a href="/dist/html/public/details.html?productId={{item.productId}}&taxon={{taxon}}&name={{item.brandName}}">
+                    <div class="media-left">
+                        <!--<img class="media-object" src="/public/images/mimi.png" alt="...">-->
+                        {{@ item.productImg}}
+                    </div>
+                    <div class="media-body">
+                        <div class="media-heading">{{item.brandName}} {{item.productName}}</div>
+                        <div class="price">
+                            {{item.productPrice}}
+                        </div>
+                        <div class="other">
+                            <div class="mall pull-left">{{item.productQuote}}</div>
+                            <div class="sales pull-left">{{item.productCom}}</div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+        <!--翻页-->
+        <div class="flip">
+            <ul class="pager">
+                <li class="previous"><a href="javascript:;"> 上一页</a></li>
+                <li>
+                    <select id="selPage" name="ff" class="drop-down">
+                        {{each pageArr value index}}
+                        <option value="{{(index+1)}}">{{(index+1)}}/{{totalPage}}</option>
+                        {{/each}}
+               </select>
+                </li>
+                <li class="next"><a href="javascript:;">下一页</a></li>
+            </ul>
+        </div>
+    </script>
+</body>
+<script src="/dist/js/lib.js"></script>
+<script src="/dist/js/comparison/list.js"></script>
+
+</html>

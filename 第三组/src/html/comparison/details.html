@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/dist/css/comparison/details.css">
+</head>
+
+<body>
+    <!--build:hearder-->
+    <!--endbuild-->
+    <!--筛选-->
+    <div class="screening clearfix">
+        <!--筛选模板的坑-->
+    </div>
+    <!--比价信息-->
+    <div class="message">
+        <!--比价信息的坑-->
+    </div>
+    <!--评价-->
+    <div class="eva clearfix">
+        <!--评价的坑-->
+    </div>
+    <!--更多评价-->
+    <div class="more">
+        <a href="javascript:;">查看更多评价</a>
+    </div>
+    <!--build:footer-->
+    <!--endbuild-->
+    <!--筛选模版-->
+    <script id="scr-tpl" type="text/template">
+        <a href="/dist/index.html">首页&nbsp;> </a>
+        <a href="/dist/html/public/list.html?categoryId={{categoryId}}">&nbsp;{{taxon}} &nbsp;> </a>
+        <a href="javascript:;"> &nbsp;{{name}}&nbsp;></a>
+        <input type="button" name="" value="筛选" class="pull-right">
+    </script>
+    <script id="mes-tpl" type="text/template">
+        <div class="tit">{{productName}}</div>
+        <div class="photo">
+            {{@productImg}}
+        </div>
+
+    </script>
+    <!--评价模板-->
+    <script id="eva-tpl" type="text/template">
+        <ul>
+            <li><a herf="javascript:;">比价购买</a></li>
+            <li><a herf="javascript:;">产品参数</a></li>
+            <li><a class='last' herf="javascript:;">评价(2322)</a></li>
+        </ul>
+        {{@bjShop}}
+        <div class="t">网友评价</div>
+        <div class="content clearfix">
+            {{each result item i}}
+            <div class="top">
+                <div class="t_left pull-left">{{item.comName}}</div>
+                <div class="t_right pull-right">{{item.comTime}}</div>
+            </div>
+            <div class="t_center">
+                <div class="t_left pull-left">
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                </div>
+                <div class="t_right pull-right">{{item.comFrom}}</div>
+            </div>
+            <div class="est">{{item.comContent}} </div>
+            <div class="reply">回复</div>
+            {{/each}}
+        </div>
+
+    </script>
+</body>
+<script src="/dist/js/lib.js"></script>
+<script src="/dist/js/comparison/details.js"></script>
+
+</html>

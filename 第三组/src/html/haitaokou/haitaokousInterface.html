@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>海淘折扣</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/dist/css/haitaokou/haitaokou-interface.css">
+</head>
+
+<body>
+    <div class="haitao-interface-header">
+        <a href="/dist/index.html" class="interface-header-a1"><i class="fa fa-angle-left"></i></a>
+        <h1>海淘折扣</h1>
+        <a href="javascript:void(0);" class="interface-header-a2"><img src="/public/images/header_app.png" alt="" /></a>
+    </div>
+    <div class="haitao-interface-content">
+        <!--这里是一个模板坑  -->
+    </div>
+    <!-- ====================================== -->
+    <div class="haitao-bottom-btn">
+        <table>
+            <tr>
+                <td class="haitao-bottom-td1">
+                    <a href="javascript:;" class="bottom-btn-pre">上一页</a>
+                </td>
+                <td class="haitao-bottom-td2">
+                    <!--这是一个模板坑  -->
+                </td>
+                <td class="haitao-bottom-td3">
+                    <a href="javascript:;" class="bottom-btn-next">下一页</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--=====================================  -->
+    <div class="haitao-bottoms">
+        <div class="bottoms-nav">
+            <ul>
+                <li class="bottoms-nav-list1"><a href="/dist/index.html">首页&nbsp;>&nbsp;</a></li>
+                <li class="bottoms-nav-list1"><a href="/dist/html/public/moneyctrl.html">省钱控&nbsp;>&nbsp;</a></li>
+                <li class="bottoms-nav-list1"><a href="/dist/html/public/haitaokousInterface.html">海淘折扣</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <footer>
+        <div class="login_handle">
+            <a href="javascript:;" class="login">
+                <span>登录</span>
+            </a>
+            <a href="javascript:;" class="register">
+                <span>注册</span>
+            </a>
+            <a href="javascript:;" class="back_to_top">
+                <span>返回顶部</span>
+            </a>
+        </div>
+        <div class="footer_nav">
+            <p>
+                <a href="javascript:;">手机APP下载</a>
+                <a href="javascript:;">慢慢买手机版</a>--掌上比价平台
+            </p>
+
+            <a>m.manmanbuy.com</a>
+        </div>
+    </footer>
+    <!--模板  -->
+    <script type="text/template" id="haitaokou-itf-tpl">
+        {{each $data haitao i}}
+        <div class="media">
+            <div class="media-left media-middle interface-content-pi">
+                <a href="javascript:;">
+                     {{@haitao.productImg2}} 
+                </a>
+            </div>
+            <div class="media-body interface-content-text">
+                <h4 class="media-heading">
+                    {{haitao.productName}}
+                    <span>{{haitao.productPinkage}}</span>
+                </h4>
+                <p>{{haitao.productFrom}}<span><i class="fa fa-file-text"></i><i>{{haitao.productComCount}}</i></span></p>
+            </div>
+        </div>
+        {{/each}}
+        <!--==========================-->
+    </script>
+    <script type="text/template" id="haitaokou-opt-tpl">
+        <select name="" class="haitao-bottom-opt" id="pageChange">
+             <%for(var i=0;i<ceiling;i++){%>
+    			<option value="<%=i+1%>" data-id=<%=i+1%> class="opt"><%= (i+1) +' / '+ ceiling %></option>
+    		<%}%>
+    	</select>
+    </script>
+    <!-- 插件 -->
+    <script src="/dist/js/lib.js"></script>
+    <script src="/dist/js/haitaokou/haitaokou-interface.js"></script>
+    <!-- <script>
+        var pageID = 1;
+        $.get('http://139.199.192.48:9090/api/getmoneyctrl', {
+            pageid: pageID
+        }, function(data) {
+            data.ceiling = Math.ceil(data.totalCount / data.pagesize);
+            $(".haitao-bottom-td2").html(template('haitaokou-opt-tpl', data));
+            console.log($("option[data-id]"));
+        })
+        $(document).on('change', '#pageChange', function() {
+            pageID = $('#pageChange option:selected').attr('data-id');
+            console.log(pageID);
+            loading();
+        })
+
+
+        function loading() {
+            $.get('http://139.199.192.48:9090/api/getmoneyctrl', {
+                pageid: pageID
+            }, function(data) {
+                $(".haitao-interface-content").html(template('haitaokou-itf-tpl', data.result));
+            });
+        }
+        loading();
+        $(".bottom-btn-pre").on('click', function() {
+            if (pageID == 1) {
+                return;
+            } else {
+                pageID--;
+            }
+            // $("option[data-id]").removeAttr("selected");
+            // $("option[data-id=" + pageID + "]").attr("selected", "selected");
+            loading();
+            console.log(pageID);
+            $('#pageChange').val(pageID);
+        });
+        $(".bottom-btn-next").on('click', function() {
+            if (pageID == 15) {
+                return;
+            } else {
+                pageID++;
+            }
+            // $("option[data-id]").removeAttr("selected");
+            // $("option[data-id=" + pageID + "]").attr("selected", "selected");
+            loading();
+            console.log(pageID);
+            $('#pageChange').val(pageID);
+        });
+    </script> -->
+</body>
+
+</html>
